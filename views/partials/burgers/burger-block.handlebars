@@ -1,9 +1,5 @@
-<li>
-	{{name}}
-
-	<button class="change-burger" data-id="{{id}}" data-newburger="{{burger}}">
-		{{#if burger}}BURGER TIME!{{else}}Let's eat!!{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-</li>
+<tr class="table-row">
+    <td class="table-first-col">{{id}}. {{burger}}</td>
+	<td> {{name}} </td>
+    <td><button class="change-burger" data-id="{{id}}">Eat this burger!</button></td> 
+</tr>

@@ -1,38 +1,37 @@
-<h1>Burgers!</h1>
 
-<h2>Burgers that are not eaten!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless eaten}}
+<!-- Handlebars template created for the burgers to be eaten -->
+<div id='eat'>
+  <h2>Burgers to Eat:</h2>
+  <ul>
+    {{#each burgers}} {{#unless this.eaten}}
+    <li>
       {{> burgers/burger-block eaten=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    </li>
+    {{/unless}} {{/each}}
+  </ul>
+</div>
+<div id='eaten'>
+  <h2>Burgers That We Have Eaten:</h2>
 
-<h2>Burgers that are eaten!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eaten=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+<!-- Handlebars template created for the burgers that HAVE been eaten -->
+  <ul>
+    {{#each burgers}} {{#if this.eaten}}
+    <li>
+      {{this.id}}. {{name}}
+      <td><button class="delete-burger" data-id="{{this.id}}">Use the restroom.</button></td>
+    </li>
+    {{/if}} {{/each}}
+  </ul>
+</div>
 
-<h2>Add a Burger</h2>
+
+
+<!-- Place to submit new burgers! -->
 <form class="create-form">
-
   <div class="form-group">
-    <label for="ca">Burger Name:</label>
+    <label for="ca">What kind of burger would you like to order?</label>
     <input type="text" id="ca" name="name">
   </div>
-
-  <div class="form-group">
-    <label for="eaten">Hungry?</label><br>
-    <input type="radio" name="eaten" value="1" checked> Hungry!<br>
-    <input type="radio" name="eaten" value="0"> Eaten
-  </div>
-
-  <button type="submit">Add Burger</button>
+  <button type="submit">Add this Burger!</button>
 </form>
