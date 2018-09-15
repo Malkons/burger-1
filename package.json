@@ -1,0 +1,27 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A \"Hamburger\" logger with MySQL, Node, Express, Handlebars and a homemade ORM. Per assignment: needs to follow the MVC design pattern, use Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apleek3/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apleek3/burger/issues"
+  },
+  "homepage": "https://github.com/apleek3/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "install": "^0.12.1",
+    "mysql": "^2.16.0"
+  }
+}
