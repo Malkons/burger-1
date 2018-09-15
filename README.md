@@ -13,7 +13,7 @@ The user can order any kind of burger by name to add it to the left column for p
 ## How to install
 To try this app locally - clone it using the following command lines in your terminal:
 
-    git clone git@github.com:angrbrd/eat-da-burger.git
+    git clone https://github.com/apleek3/burger.git
 
 Next, navigate to the file in your command line director and install the application's dependencies using
 
